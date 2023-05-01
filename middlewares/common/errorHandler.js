@@ -9,9 +9,11 @@ function notFoundHandler(req, res, next) {
 // default error handler middleware
 
 function errorHandler(err, req, res, next) {
-    res.render('error', {
-        title: 'Error Page',
-    })
+    res.locals.title = 'Error Page';
+    res.render('error')
+    // res.render('error', {
+    //     title: 'Error Page',
+    // })
 }
 
 module.exports = {
